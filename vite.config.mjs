@@ -4,15 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tagger from "@dhiwise/component-tagger";
 
 // https://vitejs.dev/config/
-// NOTE: If you deploy to GitHub Pages under a repository (https://<user>.github.io/<repo>/)
-// you must set the base path to '/<repo>/' so that assets load correctly.
-// Change 'e-gramsetu' below to match your repository name OR set BASE_PATH env var in CI.
-const repoBase = process.env.BASE_PATH || '/e-gramsetu/';
-
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? repoBase : '/',
-  // This changes the out put dir from dist to build
-  // comment this out if that isn't relevant for your project
+  base: '/e-gramsetu/',   // 👈 यह line manually add करो
   build: {
     outDir: "build",
     chunkSizeWarningLimit: 2000,
