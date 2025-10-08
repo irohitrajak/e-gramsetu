@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #FEFEFE; /* white */
+    --color-foreground: #1A1A1A; /* gray-900 */
+    --color-card: #F8F9FA; /* gray-50 */
+    --color-card-foreground: #1A1A1A; /* gray-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1A1A1A; /* gray-900 */
+    --color-muted: #F8F9FA; /* gray-50 */
+    --color-muted-foreground: #6B7280; /* gray-500 */
+    
+    /* Border and Input Colors */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-input: #F9FAFB; /* gray-50 */
+    --color-ring: #2B5D31; /* green-800 */
+    
+    /* Brand Colors */
+    --color-primary: #2B5D31; /* green-800 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #8B4513; /* saddle-brown */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    --color-accent: #FF8C00; /* dark-orange */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-success: #16A34A; /* green-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Typography */
+    --font-heading: 'Noto Sans Devanagari', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-accent: 'Noto Sans Devanagari', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+.btn-primary  {
+    @apply bg-primary text-primary-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+.btn-secondary  {
+    @apply bg-secondary text-secondary-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+.btn-accent  {
+    @apply bg-accent text-accent-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+  
+  .card-elevated {
+    @apply bg-card text-card-foreground rounded-lg shadow-sm border border-border;
+  }
+  
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+  
+  .organic-shape {
+    border-radius: 28px 16px 32px 20px;
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+  }
+  
+  .pulse-gentle {
+    animation: pulse-gentle 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .slide-up {
+    animation: slide-up 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .scale-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .scale-hover:hover {
+    transform: scale(1.02);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
