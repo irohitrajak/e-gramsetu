@@ -34,7 +34,7 @@ const QuickActions = ({ onTrackApplication, onViewFavorites, onGetHelp }) => {
       description: 'आवश्यक कागजात की जानकारी',
       icon: 'FileText',
       color: 'bg-purple-50 text-purple-600 border-purple-200',
-      action: () => {}
+      action: () => window.open('https://www.digilocker.gov.in/', '_blank')
     }
   ];
 
@@ -79,6 +79,7 @@ const QuickActions = ({ onTrackApplication, onViewFavorites, onGetHelp }) => {
           <Button
             variant="outline"
             size="sm"
+            onClick={() => window.open('https://pmkisan.gov.in/', '_blank')}
             iconName="Settings"
             iconPosition="left"
           >

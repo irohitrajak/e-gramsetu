@@ -9,6 +9,7 @@ A modern React-based project utilizing the latest frontend technologies and tool
 - **Redux Toolkit** - State management with simplified Redux setup
 - **TailwindCSS** - Utility-first CSS framework with extensive customization
 - **React Router v6** - Declarative routing for React applications
+- **Firebase Authentication** - Secure user and admin authentication system
 - **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
 - **Form Management** - React Hook Form for efficient form handling
 - **Animation** - Framer Motion for smooth UI animations
@@ -27,13 +28,45 @@ A modern React-based project utilizing the latest frontend technologies and tool
    # or
    yarn install
    ```
+
+2. Configure Firebase Authentication:
+   - Copy `.env` and add your Firebase credentials
+   - See `FIREBASE_SETUP.md` for detailed instructions
+   - See `AUTHENTICATION_GUIDE.md` for quick reference
    
-2. Start the development server:
+3. Start the development server:
    ```bash
    npm start
    # or
    yarn start
    ```
+
+## 🔐 Authentication
+
+This project includes a complete Firebase authentication system with:
+
+- **User Login** (`/login`) - For regular users
+- **Admin Login** (`/admin-login`) - For administrators with role verification
+- **User Registration** (`/register`) - Create new accounts
+- **Protected Routes** - Automatic authentication checks
+- **Role-Based Access** - Admin-only sections
+
+### Quick Setup
+
+1. **Configure Firebase** - Update `.env` with your Firebase project credentials
+2. **Enable Authentication** - Enable Email/Password in Firebase Console
+3. **Create Firestore Database** - For storing user roles
+4. **Create Admin User** - Set `role: "admin"` in Firestore
+
+For complete setup instructions, see:
+- 📘 **[FIREBASE_SETUP.md](./FIREBASE_SETUP.md)** - Detailed setup guide
+- 📘 **[AUTHENTICATION_GUIDE.md](./AUTHENTICATION_GUIDE.md)** - Quick reference
+
+### Test Credentials
+
+After setting up Firebase, create test users:
+- **Regular User**: Any email with password (min 6 chars)
+- **Admin User**: Create user, then set `role: "admin"` in Firestore
 
 ## 📁 Project Structure
 

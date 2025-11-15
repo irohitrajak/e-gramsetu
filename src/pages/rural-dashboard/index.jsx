@@ -8,8 +8,8 @@ import VoiceAssistant from './components/VoiceAssistant';
 
 const RuralDashboard = () => {
   const [currentLanguage, setCurrentLanguage] = useState('hi');
-  const [userName] = useState('राजेश कुमार');
-  const [userLocation] = useState('रायपुर, छत्तीसगढ़');
+  const [userName] = useState('रोहित रजक');
+  const [userLocation] = useState('जबलपुर , मध्यप्रदेश ');
 
   useEffect(() => {
     // Check localStorage for saved language preference

@@ -97,10 +97,16 @@ const RecentOpportunities = ({ currentLanguage }) => {
   const currentContent = content?.[currentLanguage] || content?.en;
 
   const handleApply = (opportunity) => {
+    // Specific external application link for the Anganwadi Worker (id: 3)
+    if (opportunity?.id === 3) {
+      window.location.href = 'https://chayan.mponline.gov.in/Portal/Services/WCDR/WCDRHome.aspx';
+      return;
+    }
+
     if (opportunity?.type === 'job') {
-      window.location.href = '/job-discovery-engine';
+      window.location.href = 'https://agriwelfare.gov.in/';
     } else {
-      window.location.href = '/scheme-navigator';
+      window.location.href = 'https://www.skillindiadigital.gov.in/home';
     }
   };
 

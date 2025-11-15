@@ -35,6 +35,40 @@ const SchemeCard = ({ scheme, onViewDetails, onCheckEligibility }) => {
     }
   };
 
+  const getSchemeLink = (scheme) => {
+    switch (scheme?.category) {
+      case 'employment':
+        return 'https://nrega.nic.in/';
+      case 'agriculture':
+        return 'https://pmkisan.gov.in/';
+      case 'education':
+        return 'https://www.education.gov.in/';
+      case 'health':
+        return 'https://pmjay.gov.in/';
+      case 'housing':
+        return 'https://pmaymis.gov.in/pmaymis2_2024/PmayDefault.aspx';
+      default:
+        return 'https://www.india.gov.in/';
+    }
+  };
+
+  const getEligibilityLink = (scheme) => {
+    switch (scheme?.category) {
+      case 'employment':
+        return 'https://aajeevika.gov.in/'; 
+      case 'agriculture':
+        return 'https://agriwelfare.gov.in/';
+      case 'education':
+        return 'https://scholarships.gov.in/';
+      case 'health':
+        return 'https://www.ayushmanbharat.pm/';
+      case 'housing':
+        return 'https://rhreporting.nic.in/';
+      default:
+        return 'https://serviceonline.gov.in/';
+    }
+  };
+
   return (
     <div className="bg-card border border-border rounded-lg p-6 hover:shadow-soft transition-all duration-200">
       <div className="flex items-start justify-between mb-4">
@@ -80,7 +114,7 @@ const SchemeCard = ({ scheme, onViewDetails, onCheckEligibility }) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => onCheckEligibility(scheme)}
+            onClick={() => window.open(getEligibilityLink(scheme), '_blank')}
             iconName="CheckCircle"
             iconPosition="left"
           >
@@ -89,11 +123,11 @@ const SchemeCard = ({ scheme, onViewDetails, onCheckEligibility }) => {
           <Button
             variant="default"
             size="sm"
-            onClick={() => onViewDetails(scheme)}
+            onClick={() => window.open(getSchemeLink(scheme), '_blank')}
             iconName="ArrowRight"
             iconPosition="right"
           >
-            विवरण देखें
+            आवेदन करे 
           </Button>
         </div>
       </div>

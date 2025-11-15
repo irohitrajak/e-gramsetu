@@ -21,7 +21,7 @@ const ProfileManagement = () => {
     location: ", कटनी , मध्यप्रदेश ",
     phone: "+91 98765 43210",
     email: "rohitpictures2005@gmail.com",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar: "https://scontent.fidr4-1.fna.fbcdn.net/v/t39.30808-6/476198912_1833881124032976_2733116429416603420_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=IRGG1o5WddYQ7kNvwGHP6_t&_nc_oc=AdnCYa5mI2oXVzt5-LOWbcZIq9Rexrb61upxbnMjVpwFLKLnqz1-BMX9sVvYStMqyNs&_nc_zt=23&_nc_ht=scontent.fidr4-1.fna&_nc_gid=b2orslPcGD1e0xlWWfJ6-Q&oh=00_AfftXy7VX-CcLWcxnAexTUP73gSyHqyq6qMoCp7uWuZBfQ&oe=68EC3BE1",
     completionPercentage: 75,
     verificationStatus: 'verified',
     lastUpdated: '05/10/2025',

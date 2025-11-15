@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../../components/ui/Header';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
 import SchemeCard from './components/SchemeCard';
@@ -180,19 +181,22 @@ const SchemeNavigator = () => {
   };
 
   const handleTrackApplication = () => {
-    setShowApplicationTracker(true);
+    window.open('https://www.india.gov.in/', '_blank');
   };
 
   const handleViewFavorites = () => {
-    console.log('Viewing favorite schemes');
+    window.open('https://www.digitalindia.gov.in/', '_blank');
   };
 
   const handleGetHelp = () => {
-    window.location.href = '/help-and-support';
+    window.open('https://www.mygov.in/', '_blank');
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-6 space-y-10">
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Page Header */}
           <div className="mb-8">
             <div className="flex items-center justify-between">
@@ -296,7 +300,7 @@ const SchemeNavigator = () => {
             <div className="flex items-center justify-center space-x-4">
               <Button
                 variant="default"
-                onClick={() => window.location.href = '/help-and-support'}
+                onClick={() => window.open('https://nrega.nic.in/', '_blank')}
                 iconName="Phone"
                 iconPosition="left"
               >
@@ -304,6 +308,7 @@ const SchemeNavigator = () => {
               </Button>
               <Button
                 variant="outline"
+                onClick={() => window.open('https://janaushadhi.gov.in/', '_blank')}
                 iconName="MessageCircle"
                 iconPosition="left"
               >
@@ -311,6 +316,8 @@ const SchemeNavigator = () => {
               </Button>
             </div>
           </div>
+        </div>
+      </main>
       {/* Modals */}
       {showEligibilityChecker && selectedScheme && (
         <EligibilityChecker
