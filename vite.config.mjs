@@ -24,8 +24,4 @@ export default defineConfig({
     strictPort: true,
     allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
   }
-<<<<<<< HEAD
-}); 
-=======
-}); 
->>>>>>> 390aec7ccacd118cda9758a7d9247485134d4d65
+});
