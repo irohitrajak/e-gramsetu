@@ -62,6 +62,7 @@
     "build": "vite build --sourcemap",
     "serve": "vite preview"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
